@@ -1,11 +1,28 @@
-import NavBar from '@/components/nav-bar';
+import NavBar from 'src/components/nav-bar';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import profilePic from '../../public/animated-profile.png';
+import clsx from 'clsx';
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = localFont({
+	src: [
+		{
+			path: '../../public/fonts/Roboto-Regular.ttf',
+			weight: '400',
+			style: 'normal',
+		},
+		{
+			path: '../../public/fonts/Roboto-Medium.ttf',
+			weight: '600',
+			style: 'bold',
+		},
+	],
+	variable: '--font-roboto',
+	display: 'swap',
+});
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://matthewlittrell.dev'),
@@ -29,9 +46,17 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
-			<body className='bg-gradient-to-tr overflow-x-hidden min-w-screen from-zinc-950 via-stone-900 to-neutral-950 flex min-h-screen flex-col items-center justify-between'>
-				<main className='flex-auto flex flex-col p-4 py-24 gap-6 w-full lg:w-[55%]'>
+		<html
+			lang='en'
+			className={clsx(
+				'text-black bg-white dark:bg-[#111010] dark:text-white transition-colors duration-300 ease-in-out',
+				roboto.variable
+			)}
+		>
+			{/* <body className='antialiased bg-gradient-to-tr overflow-x-hidden min-w-screen from-zinc-950 via-stone-900 to-neutral-950 flex min-h-screen flex-col justify-between max-w-2xl mb-40 md:flex-row mt-8 mx-4 lg:mx-auto'> */}
+
+			<body className='antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto'>
+				<main className='flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0'>
 					<section className='w-full flex gap-4 justify-start mb-6 p-2'>
 						<div>
 							<Image
@@ -39,11 +64,6 @@ export default function RootLayout({
 								alt='avatar'
 								className='w-12 h-12 rounded-full shadow-lg grayscale hover:grayscale-0 duration-300'
 							/>
-							{/* <img
-								src='https://avatars.githubusercontent.com/u/68690233?s=100&v=4'
-								alt='avatar'
-								className='w-12 h-12 rounded-full shadow-lg grayscale hover:grayscale-0 duration-300'
-							/> */}
 						</div>
 						<div className='flex flex-col gap-2 justify-center'>
 							<h2 className='mb-0 text-zinc-100 font-bold'>Matthew</h2>

@@ -10,10 +10,10 @@ const navItems = [
 		path: '/',
 		name: 'Home',
 	},
-	// {
-	// 	path: '/blog',
-	// 	name: 'Blog',
-	// },
+	{
+		path: '/blog',
+		name: 'Blog',
+	},
 	{
 		path: '/projects',
 		name: 'Projects',
