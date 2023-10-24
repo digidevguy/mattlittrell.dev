@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { FaRegUser } from 'react-icons/fa';
 import { GoMail, GoPaperAirplane } from 'react-icons/go';
 import { FETCH_STATUS } from 'src/libs/fetchStatus';
-import { useRouter } from 'next/navigation';
 
 export default function ContactForm() {
 	const [form, setForm] = useState({
@@ -13,7 +12,6 @@ export default function ContactForm() {
 	});
 	const [status, setStatus] = useState(FETCH_STATUS.IDLE);
 	const [error, setError] = useState<string | null>(null);
-	const router = useRouter();
 
 	function handleChange(
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -49,9 +47,6 @@ export default function ContactForm() {
 			console.log(data);
 			setStatus(FETCH_STATUS.SUCCESS);
 			setForm({ name: '', email: '', message: '' });
-			return setTimeout(() => {
-				router.push('/');
-			}, 3000);
 		} catch (error: any) {
 			console.log(error);
 			setError(error.message);
