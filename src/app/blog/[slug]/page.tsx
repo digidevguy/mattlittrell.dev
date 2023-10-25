@@ -22,9 +22,6 @@ export async function generateMetadata({
 		image,
 		slug,
 	} = post;
-	const ogImage = image
-		? `https://leerob.io${image}`
-		: `https://leerob.io/og?title=${title}`;
 
 	return {
 		title,
@@ -34,18 +31,15 @@ export async function generateMetadata({
 			description,
 			type: 'article',
 			publishedTime,
-			url: `https://leerob.io/blog/${slug}`,
+			url: `https://mattlittrell.dev/blog/${slug}`,
 			images: [
 				{
-					url: ogImage,
+					url: `https://mattlittrell.dev${image}`,
+					width: 800,
+					height: 600,
+					alt: title,
 				},
 			],
-		},
-		twitter: {
-			card: 'summary_large_image',
-			title,
-			description,
-			images: [ogImage],
 		},
 	};
 }

@@ -30,6 +30,13 @@ export default function BlogPage() {
 							<p className='text-neutral-900 dark:text-neutral-100 tracking-light'>
 								{blog.title}
 							</p>
+							<p className='text-neutral-600 dark:text-neutral-400 pl-4'>
+								{new Date(blog.publishedAt).toLocaleDateString('en-us', {
+									month: 'long',
+									day: 'numeric',
+									year: 'numeric',
+								})}
+							</p>
 						</div>
 					</Link>
 				))}
