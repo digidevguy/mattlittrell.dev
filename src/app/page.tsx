@@ -1,3 +1,6 @@
+import CallToAction from 'src/components/call-to-action';
+import SkillBoard from 'src/components/skill- board';
+
 export default function Home() {
 	return (
 		<section className='flex flex-col items-center space-y-4'>
@@ -13,6 +16,8 @@ export default function Home() {
 				collaborate with other developers to promote innovation and
 				knowledge-sharing in the web development community.
 			</p>
+			{/* <SkillBoard /> */}
+			<CallToAction />
 		</section>
 	);
 }
