@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function ExtraLifePage() {
 	return (
-		<section className='space-y-4 px-2'>
+		<section className='space-y-4 px-2 mb-10'>
 			<h1 className='font-bold text-2xl mb-8 tracking-tighter'>
 				help the charity
 			</h1>

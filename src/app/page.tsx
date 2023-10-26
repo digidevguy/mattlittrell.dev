@@ -1,5 +1,5 @@
 import CallToAction from 'src/components/call-to-action';
-import SkillBoard from 'src/components/skill- board';
+import SkillBoard from 'src/components/skill-board';
 
 export default function Home() {
 	return (

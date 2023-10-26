@@ -6,6 +6,7 @@ import Image from 'next/image';
 import profilePic from '../../public/animated-profile.png';
 import clsx from 'clsx';
 import localFont from 'next/font/local';
+import Footer from 'src/components/footer';
 
 const roboto = localFont({
 	src: [
@@ -55,7 +56,7 @@ export default function RootLayout({
 		>
 			{/* <body className='antialiased bg-gradient-to-tr overflow-x-hidden min-w-screen from-zinc-950 via-stone-900 to-neutral-950 flex min-h-screen flex-col justify-between max-w-2xl mb-40 md:flex-row mt-8 mx-4 lg:mx-auto'> */}
 
-			<body className='antialiased max-w-2xl mb-40 flex flex-col md:flex-row mt-8 mx-auto'>
+			<body className='antialiased max-w-2xl flex flex-col md:flex-row mt-8 mx-auto'>
 				<main className='flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0'>
 					<section className='w-full flex gap-4 justify-start mb-6 p-2'>
 						<div>
@@ -74,6 +75,7 @@ export default function RootLayout({
 					</section>
 					<NavBar />
 					{children}
+					<Footer />
 				</main>
 			</body>
 		</html>
