@@ -1,10 +1,8 @@
 import { NextResponse } from 'next/server';
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+import { sendMail } from 'src/utils';
 
 export async function POST(request: Request) {
 	const { name, email, message } = await request.json();
-	console.log(name, email, message);
 
 	const msg = {
 		to: process.env.RECEIEVER_EMAIL,
@@ -20,7 +18,7 @@ export async function POST(request: Request) {
 	};
 
 	try {
-		await sgMail.send(msg);
+		await sendMail(msg);
 		return NextResponse.json({
 			message: 'Message sent successfully',
 			status: 200,

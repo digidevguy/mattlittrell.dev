@@ -30,7 +30,6 @@ export default function ContactForm() {
 		}
 
 		try {
-			console.log('Sending...');
 			const res = await fetch('/api/contact', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
@@ -44,11 +43,10 @@ export default function ContactForm() {
 			}
 
 			const data = await res.json();
-			console.log(data);
+
 			setStatus(FETCH_STATUS.SUCCESS);
 			setForm({ name: '', email: '', message: '' });
 		} catch (error: any) {
-			console.log(error);
 			setError(error.message);
 			setStatus(FETCH_STATUS.ERROR);
 			return;
