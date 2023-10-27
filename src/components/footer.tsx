@@ -13,11 +13,10 @@ export default function Footer() {
 					<div className='contact-links flex flex-row space-x-2 items-center'>
 						{devConfig.author.accounts.map((social) => (
 							<a
-								href={social.href}
+								href={social.url}
 								key={social.title}
 								className='text-2xl'
 								target='_blank'
-								rel='noopener noreferrer'
 							>
 								{social.icon}
 							</a>

@@ -103,7 +103,7 @@ export default function ContactForm() {
 			/>
 			<button
 				type='submit'
-				className='dark:text-zinc-400 hover:text-white transition-all duration-300 ease-in-out bg-transparent border border-zinc-800 dark:border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
+				className='dark:text-zinc-400 hover:text-white transition-all duration-30You0 ease-in-out bg-transparent border border-zinc-800 dark:border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
 			>
 				{isLoading ? (
 					<div
