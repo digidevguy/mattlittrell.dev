@@ -59,7 +59,10 @@ export default function ContactForm() {
 	const isIdle = status === FETCH_STATUS.IDLE;
 
 	return (
-		<form onSubmit={handleSubmit} className='flex flex-col space-y-4 px-4 py-6'>
+		<form
+			onSubmit={handleSubmit}
+			className='flex flex-col space-y-4 px-4 py-6 bg-zinc-300 rounded-md shadow-md dark:bg-zinc-800 dark:shadow-none dark:rounded-none'
+		>
 			<label
 				htmlFor='name'
 				className='relative text-gray-400 focus-within:text-gray-600 block'

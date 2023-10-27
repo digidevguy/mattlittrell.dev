@@ -21,6 +21,9 @@ const nextConfig = {
 			},
 		];
 	},
+	images: {
+		formats: ['image/avif', 'image/webp'],
+	},
 };
 
 // https://nextjs.org/docs/advanced-features/security-headers

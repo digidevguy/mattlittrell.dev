@@ -59,15 +59,17 @@ export default function RootLayout({
 			<body className='antialiased max-w-2xl flex flex-col md:flex-row mt-8 mx-auto'>
 				<main className='flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0'>
 					<section className='w-full flex gap-4 justify-start mb-6 p-2'>
-						<div>
-							<Image
-								src={profilePic}
-								alt='avatar'
-								className='w-12 h-12 rounded-full shadow-lg grayscale hover:grayscale-0 duration-300'
-							/>
-						</div>
+						<Image
+							src={profilePic}
+							width={3000}
+							height={3000}
+							alt='avatar'
+							className='w-12 h-12 rounded-full shadow-lg grayscale hover:grayscale-0 duration-300'
+						/>
 						<div className='flex flex-col gap-2 justify-center'>
-							<h2 className='mb-0 text-zinc-100 font-bold'>Matthew</h2>
+							<h2 className='mb-0 text-zinc-800 dark:text-zinc-100 font-bold '>
+								Matthew
+							</h2>
 							<p className='mb-0 text-zinc-400 font-semibold leading-none'>
 								Dev • Bibliophile • Life-long learner
 							</p>
