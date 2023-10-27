@@ -14,8 +14,8 @@ export default function Footer() {
 						{devConfig.author.accounts.map((social) => (
 							<a
 								href={social.url}
-								key={social.title}
-								className='text-2xl'
+								key={social.label}
+								className={`${social.label} text-2xl`}
 								target='_blank'
 							>
 								{social.icon}
