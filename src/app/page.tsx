@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<section className='flex flex-col items-center space-y-4'>
 			<h1>Hi, I&apos;m Matthew 👋</h1>
-			<p className='prose prose-nuetral text-zinc-400'>
+			<p className='prose prose-nuetral dark:text-zinc-400'>
 				I&apos;m a full stack web developer with a passion for learning and
 				discovering new technologies. I&apos;m currently working as a small
 				business owner and freelance developer. In my work I strive to provide

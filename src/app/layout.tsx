@@ -70,7 +70,7 @@ export default function RootLayout({
 							<h2 className='mb-0 text-zinc-800 dark:text-zinc-100 font-bold '>
 								Matthew
 							</h2>
-							<p className='mb-0 text-zinc-400 font-semibold leading-none'>
+							<p className='mb-0 text-zinc-700 dark:text-zinc-400 font-semibold leading-none'>
 								Dev • Bibliophile • Life-long learner
 							</p>
 						</div>

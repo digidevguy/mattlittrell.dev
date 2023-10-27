@@ -87,7 +87,7 @@ export default function VotingForm() {
 				id='name'
 				value={form.name}
 				onChange={handleChange}
-				className='p-2 text-zinc-400 rounded-md'
+				className='p-2 dark:text-zinc-400 rounded-md'
 			/>
 			<label htmlFor='vote'>Select your game</label>
 			<select
@@ -95,11 +95,11 @@ export default function VotingForm() {
 				id='vote'
 				value={form.vote}
 				onChange={handleChange}
-				className='p-2 text-zinc-400 rounded-md'
+				className='p-2 dark:text-zinc-400 rounded-md'
 			>
 				<option value={0}>Select a game</option>
 				{gameList.map((game) => (
-					<option key={game.id} value={game.id} className='text-zinc-400'>
+					<option key={game.id} value={game.id} className='dark:text-zinc-400'>
 						{game.title}
 					</option>
 				))}
@@ -115,7 +115,7 @@ export default function VotingForm() {
 			/>
 			<button
 				type='submit'
-				className='text-zinc-400 hover:text-white transition-all duration-300 ease-in-out bg-transparent border border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
+				className='dark:text-zinc-400 hover:text-white transition-all duration-300 ease-in-out bg-transparent border border-zinc-800 dark:border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
 			>
 				{isLoading ? (
 					<div

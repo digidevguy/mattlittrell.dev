@@ -38,7 +38,7 @@ export default function NavBar() {
 	const [hoveredPath, setHoveredPath] = useState(pathname);
 
 	return (
-		<div className='border bg-zinc-300 text-zinc-950 dark:border-stone-800/90 p-[0.4rem] rounded-lg mb-12 sticky top-4 z-[100] dark:bg-stone-900/80 backdrop-blur'>
+		<div className='border bg-zinc-300 dark:border-stone-800/90 p-[0.4rem] rounded-lg mb-12 sticky top-4 z-[100] dark:bg-stone-900/80 backdrop-blur'>
 			{/* <div className='p-[0.4rem] mb-12 sticky top-4 z-[100]'> */}
 			<nav className='flex gap-2 relative justify-start w-full z-[100] rounded-lg'>
 				{navItems.map((item, index) => {
@@ -48,7 +48,7 @@ export default function NavBar() {
 						<Link
 							key={item.path}
 							className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
-								isActive ? 'text-zinc-100' : 'text-zinc-400'
+								isActive ? 'text-zinc-100' : 'text-zinc-700 dark:text-zinc-400'
 							}`}
 							data-active={isActive}
 							onMouseOver={() => setHoveredPath(item.path)}
