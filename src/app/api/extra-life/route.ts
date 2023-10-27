@@ -1,9 +1,8 @@
 import { NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
-import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
+import { createSupabaseRouteHandlerClient } from 'src/libs/supabase';
 
 export async function GET(request: Request) {
-	const supabase = createRouteHandlerClient({ cookies });
+	const supabase = createSupabaseRouteHandlerClient();
 
 	const { data, error } = await supabase
 		.from('games')
@@ -23,7 +22,7 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
 	const { name, vote, newGame } = await request.json();
 	console.log(name, vote, newGame);
-	const supabase = createRouteHandlerClient({ cookies });
+	const supabase = createSupabaseRouteHandlerClient();
 
 	if (newGame) {
 		try {
