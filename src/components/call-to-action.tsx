@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import callToActionImage from '../../public/images/kelly-sikkema-wireframe.jpg';
 
 export default function CallToAction() {
@@ -18,9 +19,12 @@ export default function CallToAction() {
 						Let&apos;s work together to make it a reality!
 					</p>
 				</div>
-				<button className='cta-btn border p-2 border-zinc-300 text-zinc-400 rounded-md md:w-3/4 w-1/2 transition-all ease-in-out hover:bg-zinc-500 hover:text-white hover:scale-110 duration-300'>
+				<Link
+					href='/contact'
+					className='cta-btn border p-2 border-zinc-300 text-zinc-400 rounded-md md:w-3/4 w-1/2 transition-all ease-in-out hover:bg-zinc-500 hover:text-white hover:scale-110 duration-300 text-center'
+				>
 					Let&apos;s create something
-				</button>
+				</Link>
 			</div>
 		</div>
 	);
