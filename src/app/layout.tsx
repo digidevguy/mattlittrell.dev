@@ -1,12 +1,12 @@
 import NavBar from 'src/components/nav-bar';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import profilePic from '../../public/animated-profile.png';
 import clsx from 'clsx';
 import localFont from 'next/font/local';
 import Footer from 'src/components/footer';
+import { Analytics } from '@vercel/analytics/react';
 
 const roboto = localFont({
 	src: [
@@ -75,6 +75,7 @@ export default function RootLayout({
 					</section>
 					<NavBar />
 					{children}
+					<Analytics />
 					<Footer />
 				</main>
 			</body>
