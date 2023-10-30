@@ -73,7 +73,7 @@ export default function VotingForm() {
 	return (
 		<form
 			onSubmit={submitVote}
-			className={`flex flex-col max-w-md mx-auto space-y-3 px-4 py-4 bg-zinc-300 dark:bg-zinc-900 border ${
+			className={`flex flex-col w-full max-w-md mx-auto space-y-3 px-4 py-4 bg-zinc-300 dark:bg-zinc-900 border ${
 				isError ? 'border-red-500' : 'border-zinc-400'
 			} rounded-md ${isLoading ? 'animate-pulse' : ''}`}
 		>

@@ -57,20 +57,22 @@ export default function FeedbackPage() {
 		<section className='h-max flex flex-col items-center justify-center'>
 			<form
 				onSubmit={submitFeedback}
-				className='flex flex-col space-y-4 bg-zinc-800 px-4 py-6 rounded-md'
+				className='flex flex-col space-y-4 bg-zinc-300 dark:bg-zinc-800 px-4 py-6 rounded-md'
 			>
 				<div className=''>
-					<h1 className='text-2xl font-bold text-zinc-100'>Feedback</h1>
-					<p className='text-zinc-400 font'>
+					<h1 className='text-2xl font-bold dark:text-zinc-100'>Feedback</h1>
+					<p className='text-zinc-700 dark:text-zinc-400'>
 						I would love to hear your thoughts or feedback on how the site can
 						be improved.
 					</p>
 				</div>
-				<label htmlFor='type'>Feedback Type</label>
+				<label htmlFor='type' className='dark:text-zinc-100'>
+					Feedback Type
+				</label>
 				<select
 					id='type'
 					name='type'
-					className='p-2 rounded-md text-zinc-400'
+					className='p-2 rounded-md dark:text-zinc-400'
 					value={form.type}
 					onChange={handleChange}
 				>
@@ -79,28 +81,32 @@ export default function FeedbackPage() {
 					<option value='question'>Question</option>
 					<option value='feature-request'>Feature Request</option>
 				</select>
-				<label htmlFor='feedback'>Feedback</label>
+				<label htmlFor='feedback' className='dark:text-zinc-100'>
+					Feedback
+				</label>
 				<textarea
 					id='feedback'
 					name='feedback'
 					rows={4}
-					className='p-2 rounded-md text-zinc-400'
+					className='p-2 rounded-md dark:text-zinc-400'
 					value={form.feedback}
 					onChange={handleChange}
 				/>
-				<label id='name'>Your name</label>
+				<label id='name' className='dark:text-zinc-100'>
+					Your name
+				</label>
 				<input
 					type='text'
 					id='name'
 					name='name'
-					className='p-2 rounded-md text-zinc-400'
+					className='p-2 rounded-md dark:text-zinc-400'
 					value={form.name}
 					onChange={handleChange}
 				/>
 				<div className='flex w-full justify-around p-4'>
 					<button
 						type='submit'
-						className='py-2 px-6 border border-zinc-100 rounded-md'
+						className='dark:text-zinc-400 hover:text-white transition-all duration-30You0 ease-in-out bg-transparent border border-zinc-800 dark:border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
 					>
 						{isLoading ? (
 							<div
@@ -112,7 +118,7 @@ export default function FeedbackPage() {
 					</button>
 					<button
 						type='reset'
-						className='py-2 px-6 border border-zinc-100 rounded-md'
+						className='dark:text-zinc-400 hover:text-white transition-all duration-30You0 ease-in-out bg-transparent border border-zinc-800 dark:border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
 						onClick={() => setForm({ name: '', type: '', feedback: '' })}
 					>
 						Reset form
