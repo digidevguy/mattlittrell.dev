@@ -9,11 +9,11 @@ export const sendEmail = async (subject: string, text: string) => {
 		return;
 	}
 
-	console.log('TO:', process.env.RECEIEVER_EMAIL);
+	console.log('TO:', process.env.RECEIVER_EMAIL);
 	console.log('FROM:', process.env.SENDER_EMAIL);
 
 	const msg = {
-		to: process.env.RECEIEVER_EMAIL!,
+		to: process.env.RECEIVER_EMAIL!,
 		from: process.env.SENDER_EMAIL!,
 		subject,
 		text,
@@ -21,7 +21,7 @@ export const sendEmail = async (subject: string, text: string) => {
 
 	try {
 		await sgMail.send(msg);
-		console.log(`Email sent to ${process.env.RECEIEVER_EMAIL}`);
+		console.log(`Email sent to ${process.env.RECEIVER_EMAIL}`);
 	} catch (error) {
 		console.error(error);
 	}
