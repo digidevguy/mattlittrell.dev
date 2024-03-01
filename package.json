@@ -10,7 +10,7 @@
 		"types": "npx supabase gen types typescript --project-id rikyifarokbldaoyxxsq > src/types/supabase.ts"
 	},
 	"dependencies": {
-		"@sendgrid/mail": "^7.7.0",
+		"@sendgrid/mail": "^8.1.1",
 		"@supabase/auth-helpers-nextjs": "^0.8.1",
 		"@supabase/supabase-js": "^2.38.2",
 		"@vercel/analytics": "^1.1.1",

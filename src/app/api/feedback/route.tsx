@@ -1,31 +1,17 @@
-import { sendMail } from 'src/utils';
+import { sendEmail } from 'src/libs/sendgrid';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
 	const { type, feedback, name } = await request.json();
 
-	const msg = {
-		to: process.env.RECEIEVER_EMAIL,
-		from: process.env.SENDER_EMAIL,
-		subject: `New ${type} from ${name}`,
-		html: `
-                <p>${feedback}</p>
-                <br>
-                <br>
-                <p>From: ${name}</p>
-            `,
-	};
+	const subject = `New ${type} from ${name}`;
+	const text = `${feedback}\n\nFrom: ${name}`;
 
 	try {
-		await sendMail(msg);
-		return NextResponse.json({
-			message: 'Message sent successfully',
-			status: 200,
-		});
+		await sendEmail(subject, text);
+		return NextResponse.json({ message: 'Email sent successfully' });
 	} catch (error) {
-		return NextResponse.json({
-			message: 'Message failed to send',
-			status: 500,
-		});
+		console.error(error);
+		return NextResponse.json({ message: 'Internal Server Error' });
 	}
 }
