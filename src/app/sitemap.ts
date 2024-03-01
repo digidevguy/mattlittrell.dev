@@ -7,12 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		lastModified: post.publishedAt,
 	}));
 
-	const routes = ['', '/blog', '/extra-life', '/contact', '/feedback'].map(
-		(route) => ({
-			url: `https://mattlittrell.dev${route}`,
-			lastModified: new Date().toISOString().split('T')[0],
-		})
-	);
+	const routes = ['', '/blog', '/contact', '/feedback'].map((route) => ({
+		url: `https://mattlittrell.dev${route}`,
+		lastModified: new Date().toISOString().split('T')[0],
+	}));
 
 	return [...routes, ...blogs];
 }

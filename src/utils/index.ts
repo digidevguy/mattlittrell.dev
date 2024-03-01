@@ -5,6 +5,7 @@ import { NextResponse } from 'next/server';
 export async function sendMail(msg) {
 	try {
 		const res = await sgMail.send(msg);
+		console.log(res);
 
 		if (res[0].statusCode !== 202) {
 			throw new Error('Failed to send email');
