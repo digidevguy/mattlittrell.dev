@@ -5,28 +5,7 @@ import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-const navItems = [
-	{
-		path: '/',
-		name: 'Home',
-	},
-	{
-		path: '/blog',
-		name: 'Blog',
-	},
-	// {
-	// 	path: '/projects',
-	// 	name: 'Projects',
-	// },
-	{
-		path: '/extra-life',
-		name: 'Extra Life',
-	},
-	{
-		path: '/contact',
-		name: 'Contact',
-	},
-];
+import { navItems } from 'src/data/navigation';
 
 export default function NavBar() {
 	let pathname = usePathname() || '/';

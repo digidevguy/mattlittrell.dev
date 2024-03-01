@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { GoPaperAirplane } from 'react-icons/go';
 import { FETCH_STATUS } from 'src/libs/fetchStatus';
 
 export default function FeedbackPage() {
@@ -106,7 +107,7 @@ export default function FeedbackPage() {
 				<div className='flex w-full justify-around p-4'>
 					<button
 						type='submit'
-						className='dark:text-zinc-400 hover:text-white transition-all duration-30You0 ease-in-out bg-transparent border border-zinc-800 dark:border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
+						className='dark:text-zinc-400 hover:text-white transition-all duration-300 ease-in-out bg-transparent border border-zinc-800 dark:border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
 					>
 						{isLoading ? (
 							<div
@@ -114,7 +115,8 @@ export default function FeedbackPage() {
 								role='status'
 							/>
 						) : null}{' '}
-						Submit
+						<p className='pointer-events-none'>Send</p>{' '}
+						<GoPaperAirplane className='inline-block w-4 h-4 pointer-events-none' />
 					</button>
 					<button
 						type='reset'

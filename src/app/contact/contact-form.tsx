@@ -68,7 +68,7 @@ export default function ContactForm() {
 				className='relative text-gray-400 focus-within:text-gray-600 block'
 			>
 				{!form.name ? (
-					<FaRegUser className='pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3' />
+					<FaRegUser className='pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-3' />
 				) : null}
 				<input
 					type='text'
@@ -83,7 +83,7 @@ export default function ContactForm() {
 				className='relative text-gray-400 focus-within:text-gray-600 block'
 			>
 				{!form.email ? (
-					<GoMail className='pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3' />
+					<GoMail className='pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-3' />
 				) : null}
 				<input
 					type='email'
@@ -103,7 +103,7 @@ export default function ContactForm() {
 			/>
 			<button
 				type='submit'
-				className='dark:text-zinc-400 hover:text-white transition-all duration-30You0 ease-in-out bg-transparent border border-zinc-800 dark:border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
+				className='dark:text-zinc-400 hover:text-white transition-all duration-300 ease-in-out bg-transparent border border-zinc-800 dark:border-zinc-400 hover:bg-zinc-400 hover:border-transparent rounded-md py-2 px-4 flex items-center justify-center space-x-2'
 			>
 				{isLoading ? (
 					<div
