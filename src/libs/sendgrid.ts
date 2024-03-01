@@ -24,7 +24,5 @@ export const sendEmail = async (subject: string, text: string) => {
 		console.log(`Email sent to ${process.env.RECEIEVER_EMAIL}`);
 	} catch (error) {
 		console.error(error);
-		console.log('TO:', process.env.RECEIEVER_EMAIL);
-		console.log('FROM:', process.env.SENDER_EMAIL);
 	}
 };

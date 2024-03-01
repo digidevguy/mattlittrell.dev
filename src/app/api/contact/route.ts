@@ -12,6 +12,7 @@ export async function POST(request: Request) {
 		return NextResponse.json({ message: 'Email sent successfully' });
 	} catch (error) {
 		console.error(error);
+		console.error(process.env.RECEIVER_EMAIL, process.env.SENDER_EMAIL);
 		return NextResponse.json({ message: 'Internal Server Error' });
 	}
 }
